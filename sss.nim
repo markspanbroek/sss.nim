@@ -12,7 +12,7 @@ func randomKey*(): Key =
 func shares*(key: Key, threshold, amount: static uint8): array[amount, Share] =
   c.sss_create_keyshares(addr result[0], array[32, byte](key), amount, threshold)
 
-proc combine*(shares: openArray[Share]): Key =
+func combine*(shares: openArray[Share]): Key =
   let sharesPtr = unsafeAddr shares[0]
   let sharesLen = uint8(len(shares))
   c.sss_combine_keyshares(array[32, byte](result), sharesPtr, sharesLen)
