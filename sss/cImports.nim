@@ -15,6 +15,10 @@ static:
     checkout = "d78159c",
     outdir = src/"randombytes"
   )
+  when defined(windows):
+    # copy files instead of using symbolic links
+    cpFile(src/"randombytes"/"randombytes.c", src/"randombytes.c")
+    cpFile(src/"randombytes"/"randombytes.h", src/"randombytes.h")
 
 static:
   cCompile(src/"randombytes.c")
