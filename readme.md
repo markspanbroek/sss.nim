@@ -29,5 +29,15 @@ Restore the key by combining 2 shares:
 let restored = combine(shares[0..1])
 ```
 
+Updating to a newer version
+---------------------------
+
+Follow these steps when updating the wrapper to a newer version of sss:
+
+   1. update the git submodule in `sources/` to point to the new version
+   2. run `build.sh`
+   3. update the version in `sss.nimble`
+   4. commit the changes
+
 [1]: https://github.com/dsprenkels/sss
 [2]: https://github.com/dsprenkels/sss#technical-details

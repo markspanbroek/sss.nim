@@ -1,4 +1,4 @@
-from sss/cImports as c import nil
+from sss/cwrapper as c import nil
 
 type
   Key* = distinct array[32, byte]
