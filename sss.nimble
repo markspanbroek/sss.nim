@@ -1,9 +1,11 @@
 # Package
 
-version     = "0.3.0"
+version     = "0.3.1"
 author      = "Mark Spanbroek"
 description = "Shamir secret sharing"
 license     = "MIT"
+installDirs = @["sources", "sss"]
+installFiles = @["sss.nim"]
 
 # Dependencies
 
